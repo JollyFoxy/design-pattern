@@ -9,16 +9,26 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Duck[] kryak = new Duck[]
+            Duck[] Uti = new Duck[]
             {
                 new MallardDuck(),
-                new RedheadDuck()
+                new RedheadDuck(),
+                new RubberDuck(),
+                new DecoyDuck(),
             };
-            foreach (Duck kyra in kryak)
+            foreach (Duck utya in Uti)
             {
-                Console.WriteLine(kyra.Swim());
-                Console.WriteLine(kyra.Quack());
-                Console.WriteLine(kyra.Display());
+                Console.WriteLine(utya.Swim());
+                Console.WriteLine(utya.Display());
+                if(utya is IFlyable)
+                {
+                    Console.WriteLine((utya as IFlyable).fly());
+                }
+                if (utya is IQuackble)
+                {
+                    Console.WriteLine((utya as IQuackble).quack());
+                }
+                Console.WriteLine();
             }
             Console.ReadKey();
         }

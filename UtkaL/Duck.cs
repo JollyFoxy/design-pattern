@@ -8,10 +8,7 @@ namespace UtkaL
 {
     public abstract class Duck
     {
-        public string Quack()
-        {
-            return "quack" + this.GetType();
-        }
+      
         public string Swim()
         {
             return "swim" + this.GetType();
