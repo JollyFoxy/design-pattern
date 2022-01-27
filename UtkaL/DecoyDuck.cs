@@ -8,9 +8,11 @@ namespace UtkaL
 {
      public class DecoyDuck : Duck
     {
-        public override string Display()
+        public DecoyDuck()
         {
-            return "display" + this.GetType();
+            flyBehavior = new FlyNoWay();
+            quackBehavior = new MuteQuack();
+          //  return "display" + this.GetType();
         }
     }
 }

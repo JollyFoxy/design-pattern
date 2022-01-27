@@ -8,11 +8,31 @@ namespace UtkaL
 {
     public abstract class Duck
     {
-      
+        protected IFlyBehavior flyBehavior;
+        protected IQuackBehavior quackBehavior;
+        public void setFlyBehavior(IFlyBehavior fb)
+        {
+            flyBehavior = fb;
+        }
+        public void setQuackBehavior(IQuackBehavior qb)
+        {
+            quackBehavior = qb;
+        }
         public string Swim()
         {
-            return "swim" + this.GetType();
+            return "Буль буль буль" + this.GetType();
         }
-        public abstract string Display();
+        public string Display()
+        {
+            return this.GetType() + " " + flyBehavior.fly() + " " + this.quackBehavior.quack();
+        }
+        public string quack()
+        {
+            return quackBehavior.quack();
+        }
+        public string fly()
+        {
+            return flyBehavior.fly(); 
+        }
     }
 }

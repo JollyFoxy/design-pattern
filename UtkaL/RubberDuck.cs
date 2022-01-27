@@ -6,16 +6,13 @@ using System.Threading.Tasks;
 
 namespace UtkaL
 {
-    public class RubberDuck : Duck, IQuackble
+    public class RubberDuck : Duck
     {
-        public override string Display()
+        public RubberDuck()
         {
-            return "display" + this.GetType();
-        }
-
-        public string quack()
-        {
-            return "quack" + this.GetType();
+            flyBehavior = new FlyNoWay();
+            quackBehavior = new Squeak();
+ //           return "display" + this.GetType();
         }
     }
 }

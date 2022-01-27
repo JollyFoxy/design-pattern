@@ -6,21 +6,13 @@ using System.Threading.Tasks;
 
 namespace UtkaL
 {
-    public class MallardDuck : Duck, IFlyable, IQuackble
+    public class MallardDuck : Duck
     {
-        public override string Display()
+        public MallardDuck()
         {
-            return "display" + this.GetType();
-        }
-
-        public string fly()
-        {
-            return "fly" + this.GetType();
-        }
-
-        public string quack()
-        {
-            return "quack" + this.GetType();
+            flyBehavior = new FlyWithWings();
+            quackBehavior = new DQuack();
+            //return "display" + this.GetType();
         }
     }
 }

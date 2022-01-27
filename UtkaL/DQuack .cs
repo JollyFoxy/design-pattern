@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace UtkaL
 {
-    public interface IFlyable
+    public class DQuack : IQuackBehavior
     {
-        string fly();
+        public string quack()
+        {
+            return "Кря кря кря" + this.GetType();
+        }
     }
 }

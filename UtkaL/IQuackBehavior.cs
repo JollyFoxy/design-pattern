@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UtkaL
 {
-    public interface IQuackble
+    public interface IQuackBehavior
     {
         string quack();
     }

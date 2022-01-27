@@ -14,20 +14,12 @@ namespace ConsoleApp1
                 new MallardDuck(),
                 new RedheadDuck(),
                 new RubberDuck(),
-                new DecoyDuck(),
+                new DecoyDuck()
             };
             foreach (Duck utya in Uti)
-            {
+           {
                 Console.WriteLine(utya.Swim());
                 Console.WriteLine(utya.Display());
-                if(utya is IFlyable)
-                {
-                    Console.WriteLine((utya as IFlyable).fly());
-                }
-                if (utya is IQuackble)
-                {
-                    Console.WriteLine((utya as IQuackble).quack());
-                }
                 Console.WriteLine();
             }
             Console.ReadKey();
