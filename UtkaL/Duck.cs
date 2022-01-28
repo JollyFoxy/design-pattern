@@ -24,15 +24,15 @@ namespace UtkaL
         }
         public string Display()
         {
-            return this.GetType() + " " + flyBehavior.fly() + " " + this.quackBehavior.quack();
+            return this.GetType() + " " + flyBehavior.fly() + " " + quackBehavior.quack();
         }
-        public string quack()
+       /* public string quack()
         {
             return quackBehavior.quack();
         }
         public string fly()
         {
             return flyBehavior.fly(); 
-        }
+        }*/
     }
 }
