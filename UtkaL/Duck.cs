@@ -26,13 +26,13 @@ namespace UtkaL
         {
             return this.GetType() + " " + flyBehavior.fly() + " " + quackBehavior.quack();
         }
-       /* public string quack()
+        public string quack()
         {
             return quackBehavior.quack();
         }
         public string fly()
         {
             return flyBehavior.fly(); 
-        }*/
+        }
     }
 }
